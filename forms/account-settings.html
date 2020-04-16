@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<title>Account Settings</title>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+        
+<style>
+    
+
+.grid-container { display:grid;
+                       grid-template-columns:25% 50% 25%; 
+                       margin:auto;width:90%;
+                       grid-row-gap:20px;
+         
+          
+                      }
+    
+header {background-color: red; grid-column: 1/4;
+                  text-align: left;padding-top:2em;}
+            
+body {font-family: calibri; background-color: gainsboro;}
+    
+header { padding: 14px 16px;}
+    
+header h1 {color: aliceblue;}
+    
+.container {background-color: red;}
+    
+.grid-container p  {padding-left: 20px; padding-right: 20px;}
+    
+footer {background-color: black;}
+    
+footer h3  {color: yellow;}
+    
+.footerLeft p{color:aliceblue;}
+    
+.footerCenter p{color:aliceblue;}
+    
+.footerRight p{color:aliceblue;}
+    
+.footerBottom {color:aliceblue;}
+    
+input[type=text]:focus, input[type=password]:focus {background-color: gainsboro; outline: none;}
+    
+    h2{color: ghostwhite; background-color: black; padding-top: 200px; padding-left: 3em;}
+    
+    footer h3 {padding-top: 20px; padding-left: 1em;}
+    
+    header img {float: left;}
+
+
+</style>
+        
+<meta charset="UTF-8">
+    
+</head>
+
+<body>
+    
+<div class="grid-container"> 
+
+<header> 
+    
+<img src="LIT-LOGOmain.png">
+
+<h1>LITplay </h1>
+
+</header>
+    
+
+<h2> Account Settings</h2>
+
+<form action="" method="get">
+
+<p> <label for="firstname"> First Name: </label> </p>
+           
+<p> <input type= "text" name="firstname" id="firstname" placeholder="Example: Clinton" required> </p>
+            
+<p> <label for="lastname" > Last Name: </label> </p> 
+            
+<p><input type= "text" name="lastname" id="lastname" placeholder="Example: Onyenze" required> </p>
+             
+<p> <label for="email"> Email Address: </label></p>
+           
+<p><input type= "text" name="email" id="email" placeholder="K00999999@lit.ie" required> </p>
+            
+
+            
+<p> 
+<label>Gender</label>
+</p>
+
+<p>
+<label><input type="radio" name="gender" value="Male" checked="checked"> Male</label>
+<label><input type="radio" name="gender" value="female"> Female</label>          
+</p>
+            
+<p>   
+<label for="country">Country</label> 
+</p> 
+    
+<p>     
+<select name="country" id="country">
+          
+<option>Nigeria</option>
+<option>Ghana</option>
+<option>Ireland</option>
+<option>Luxembourg</option>
+<option>Belgium</option>
+<option>USA</option>
+<option>UK</option>
+<option>Canada</option>
+<option>Australia</option>
+<option>China</option>
+<option>Japan</option>
+<option>Indian</option>
+
+             
+</select>
+
+</p>
+            
+<fieldset>
+    
+<legend>Change Password</legend>
+    
+<p> <label for="password1"> New Password </label></p>
+           
+<p><input type= "password" name="password1" id="password1" placeholder="**********" required> </p>
+    
+<p> <label for="password2"> Confirm Password </label></p>
+           
+<p><input type= "password" name="password2" id="password2" placeholder="**********" required> </p>
+   
+   
+</fieldset>
+             
+<p> <input type="submit" value= "Update">  <input type="reset" value= "Cancel"> </p>
+             
+</form>
+
+
+
+
+
+<footer> 
+
+<div class="footerLeft"> 
+
+<h3> Contact Information </h3> 
+    
+<p> Address:158 Curragh Birin Castletroy Co.Limerick </p>
+    
+<p> Phone:+35389541463 </p>
+    
+<p><a href="mailto:k00253718@student.lit.ie">Email:k00253718@student.lit.ie</a></p>
+
+</div>
+
+
+<div class="footerCenter"> 
+
+<h3>Company</h3>
+
+<p>Jobs</p>
+
+<p>Security</p>
+    
+<p>Support</p>
+    
+<p>Review</p>
+
+</div>
+
+
+<div class="footerRight"> 
+
+<h3>Legal</h3>
+
+<p>Terms</p>
+
+<p>Safety Policy</p>
+    
+<p>Cookie Policy</p>
+    
+<p>Policy Centre</p>
+    
+
+
+</div>
+    
+
+<div class="footerBottom">
+ 
+&copy; LIT.ie (2020) | Designed by Clinton Onyenze
+    
+</div>
+
+</footer>
+    
+</div>
+
+</body>
+
+</html>
