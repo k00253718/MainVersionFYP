@@ -2,7 +2,7 @@
 /**
  * Class: Account
  *
- * @author gerry.guinane
+ * @AUTHOR: CLINTON ONYENZE
  * 
  */
 

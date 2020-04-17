@@ -11,7 +11,7 @@
      * User Logout
      * Persisting user session data by keeping the$_SESSION array up to date
  *
- * @author gerry.guinane
+ * @AUTHOR: CLINTON ONYENZE 
  */
 class User extends Model {
     
@@ -173,7 +173,10 @@ class User extends Model {
                 $returnString.='<label for="LastName">LastName</label><input required type="text" class="form-control" value="'.$row['LastName'].'" id="LastName" name="LastName" pattern="[a-zA-Z0-9óáéí\' ]{1,45}" title="LastName (up to 45 Characters)">';
                 $returnString.='<label for="email">email</label><input required readonly type="text" class="form-control" value="'.$row['email'].'" id="email" name="email" title="This field cannot be edited">';
                 $returnString.='<label for="mobile">mobile</label><input required type="text" class="form-control" value="'.$row['mobile'].'" id="mobile" name="mobile" pattern="[0-9()- ]{1,45}" title="mobile (up to 45 Characters)">';
-
+            //  $returnString.='<label for="gender">gender</label> <input required type="radio" class="form-control" value="'.$row['male'].'" id="male" name="male" >';
+             // $returnString.='<label for="country">country</label><input required type="text" class="form-control" value="'.$row['country'].'" id="country" name="country">';
+            //  $returnString.='<label for="birthdate">Date of Birth</label><input required type="date" class="form-control" value="'.$row['day'].'" id="day" name="day">';
+            //  $returnString.='<label for="best_friend_name"> Best Friend Name</label><input required type="text" class="form-control" value="'.$row['best_friend_name'].'" id="best_friend_name" name="best_friend_name">';
                 $returnString.='</div>';
                 $returnString.='<button type="submit" class="btn btn-default" name="btn" value="accountSave">Save Changes</button>';
                 $returnString.='</form>'; 
