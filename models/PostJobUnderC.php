@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Class: UnderConstruction
+ * CLASS: POST JOB UNDER CONSTRUCTION
  * 
- * This is a template/empty class that provides 'under construction' content.
+ * THIS CLASS DISPLAY THE FORMS WHERE A PLACEMENT OFFICER CAN POST AND DELETE A JOB WHEN NECESSARY.
  * 
- * It handles bot logged in and not logged in usee cases. 
+ * IT HANDLES BOTH WHEN A PLACEMENT OFFICER IS LOGGED IN AND NOT LOGGED IN USER CASES. 
  *
  * @AUTHOR: CLINTON ONYENZE
  * 

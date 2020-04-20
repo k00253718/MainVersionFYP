@@ -8,6 +8,7 @@ $DBServer = '127.0.0.1'; // e.g 'localhost' or '127.0.0.1'
 $DBUser   = 'root';  //the MySQL user name
 $DBPass   = '';  //the MySQL user password
 $DBName   = 'k00999999_A01'; //the MySQL database name
+//$DBName   = 'k00253718-workplacementv2'; //the MySQL database name
 //
 ?>
 

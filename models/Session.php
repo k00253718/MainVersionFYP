@@ -1,9 +1,10 @@
 <?php
 /**
- * Description of Session
+ * CLASS: DESCRIPTION OF SESSION
  * 
- * The Session Class is responsible for persistance of user data between page requests. 
- * Data is stored in the superglobal array $_SESSION
+ * THE SESSION CLASS IS RESPONSIBLE FOR PERSISTENCE OF USER DATA BETWEEN PAGE REQUESTS.
+ * 
+ * DATA IS STORED IN THE SUPERGLOBAL ARRAY $_SESSION. 
  *
  * @AUTHOR: CLINTON ONYENZE
  */

@@ -1,10 +1,12 @@
 <?php
 /**
- * Class: Student Chat Room UnderConstruction
+ * CLASS: STUDENT CHAT ROOM UNDER CONSTRUCTION 
  * 
- * This is a template/empty class that provides 'under construction' content.
+ * THIS IS A CLASS THAT DISPLAY THE CONTENT OF THE STUDENT CHAT ROOM.
  * 
- * It handles bot logged in and not logged in usee cases. 
+ * IT IS CONTROLLED BY THE STUDENT ONLY.
+ * 
+ * IT HANDLES BOTH LOGGED IN AND NOT LOGGED IN STUDENTS. 
  *
  * @AUTHOR: CLINTON ONYENZE
  * 

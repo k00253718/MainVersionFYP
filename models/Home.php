@@ -1,11 +1,14 @@
 <?php
 /**
- * Class: Home
- * This class is used to generate text content for the HOME page view.
+ * CLASS: HOME
  * 
- * This is the 'landing' page for the web application. 
+ * BOTH STUDENT AND PLACEMENT OFFICER HOME 
  * 
- * It handles both logged in and not logged in user cases and ADMINISTRATOR and CUSTOMER user types
+ * THIS CLASS IS USED TO GENERATE TEXT CONTENT FOR THE HOME PAGE VIEW.
+ * 
+ * THIS IS THE LANDING PAGE FOR THE WEB APPLICATION.  
+ * 
+ * IT HANDLES BOTH LOGGED IN AND NOT LOGGED IN USER CASES AND ADMINISTRATORS AND CUSTOMER USER TYPES.
  *
  * @AUTHOR: ONYENZE CLINTON
  * 

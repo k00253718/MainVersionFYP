@@ -1,12 +1,12 @@
 <?php
 /**
- * Class: UnderConstruction
+ * CLASS: VIEW JOBS UNDER CONSTRUCTION
  * 
- * This is a template/empty class that provides 'under construction' content.
+ * THIS IS THE CLASS THAT THE STUDENTS USES TO VIEW THE JOBS OPPORTUNITIES PAGE.
  * 
- * It handles bot logged in and not logged in usee cases. 
+ * IT HANDLES BOTH LOGGED IN AND NOT LOGGED IN STUDENTS. 
  *
- * @AUTHOR: ONYENZE CLINTON
+ * @AUTHOR: CLINTON ONYENZE
  * 
  */
 

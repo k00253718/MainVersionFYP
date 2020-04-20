@@ -3,7 +3,7 @@
 /*
  * CLASS: REGISTER 
  *
- * THIS CLASS PROCESSES A USER REGISTRATION FORM 
+ * THIS CLASS PROCESSES BOTH PLACEMENT OFFICER AND STUDENT USER REGISTRATION FORM 
  *
  * @AUTHOR: ONYENZE CLINTON
  * 
@@ -124,6 +124,21 @@ class Register extends Model{
     //PROCESS THE REGISTRATION DATA
                     
     $this->panelContent_2='Passwords Match<br>';
+    
+    // CLINTON
+    
+    //$this->panelContent_2='Passwords DONT Match<br>';
+    //$this->panelContent_2.='USER NAME   : '.$this->postArray['user_username'].'<br>';
+    //$this->panelContent_2.='FIRST NAME   : '.$this->postArray['user_firstname'].'<br>';
+    //$this->panelContent_2.='LAST NAME   : '.$this->postArray['user_lastname'].'<br>';
+    //$this->panelContent_2.='EMAIL   : '.$this->postArray['user_email'].'<br>';
+    //$this->panelContent_2.='PASSWORD   : '.$this->postArray['user_password'].'<br>';
+    //$this->panelContent_2.='CONFIRM PASSWORD   : '.$this->postArray['user_password'].'<br>';
+    //$this->panelContent_2.='GENDER   : '.$this->postArray['user_gender'].'<br>';
+    //$this->panelContent_2.='COUNTRY   : '.$this->postArray['user_country'].'<br>';
+    //$this->panelContent_2.='PHONE   : '.$this->postArray['user_phone'].'<br>';
+    //$this->panelContent_2.='DATE OF BIRTH  : '.$this->postArray['user_dob'].'<br>';
+    //$this->panelContent_2.='SECURITY QUESTION ANSWER   : '.$this->postArray['user_forgotten_answer'].'<br>';
                     
     $this->panelContent_2.='email   : '.$this->postArray['email'].'<br>';
                     
@@ -178,7 +193,22 @@ class Register extends Model{
     
     $this->panelContent_2.='Country : '.$this->postArray['country'].'<br>';
     
-    $this->panelContent_2.='Date of Birth : '.$this->postArray['day'].$this->postArray['month'].$this->postArray['year'].'<br>';               
+    $this->panelContent_2.='Date of Birth : '.$this->postArray['day'].$this->postArray['month'].$this->postArray['year'].'<br>';
+    
+    // CLINTON
+        
+    //$this->panelContent_2='Passwords DONT Match<br>';
+    //$this->panelContent_2.='USER NAME   : '.$this->postArray['user_username'].'<br>';
+    //$this->panelContent_2.='FIRST NAME   : '.$this->postArray['user_firstname'].'<br>';
+    //$this->panelContent_2.='LAST NAME   : '.$this->postArray['user_lastname'].'<br>';
+    //$this->panelContent_2.='EMAIL   : '.$this->postArray['user_email'].'<br>';
+    //$this->panelContent_2.='PASSWORD   : '.$this->postArray['user_password'].'<br>';
+    //$this->panelContent_2.='CONFIRM PASSWORD   : '.$this->postArray['user_password'].'<br>';
+    //$this->panelContent_2.='GENDER   : '.$this->postArray['user_gender'].'<br>';
+    //$this->panelContent_2.='COUNTRY   : '.$this->postArray['user_country'].'<br>';
+    //$this->panelContent_2.='PHONE   : '.$this->postArray['user_phone'].'<br>';
+    //$this->panelContent_2.='DATE OF BIRTH  : '.$this->postArray['user_dob'].'<br>';
+    //$this->panelContent_2.='SECURITY QUESTION ANSWER   : '.$this->postArray['user_forgotten_answer'].'<br>';
                 
     }
             

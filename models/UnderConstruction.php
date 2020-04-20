@@ -1,10 +1,10 @@
 <?php
 /**
- * Class: UnderConstruction
+ * CLASS: FREE UNDER CONSTRUCTION PAGE 
+ *  
+ * THIS IS AN EMPTY CLASS THAT CAN BE USED TO DEVELOP ANOTHER PAGE FOR ANY OF THE APPLICATION USERS.
  * 
- * This is a template/empty class that provides 'under construction' content.
- * 
- * It handles bot logged in and not logged in usee cases. 
+ * IT WILL HANDLE BOTH LOGGED IN AND LOGGED IN USER CASES. 
  *
  * @AUTHOR: CLINTON ONYENZE
  * 

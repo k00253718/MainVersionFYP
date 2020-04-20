@@ -1,12 +1,15 @@
 <?php
 /**
- * Class: Navigation
- * This class is used to generate navigation menu items in an an array for the view.
+ * CLASS: NAVIGATION 
  * 
- * It uses the logged in status, user type  and currently selected pageID to determine which items 
- * are included in the menu for that specific page.
+ * THIS CLASS IS USED TO GENERATE NAVIGATION MENU ITEMS IN AN ARRAY FOR THE VIEW.
+ * 
+ * IT USES THE LOGGED IN STATUS, USER TYPE AND TYPE AND CURRENTLY SELECTED PAGEID- 
+ * 
+ * TO DETERMINE WHICH ITEMS ARE INCLUDED IN THE MENU FOR THAT SPECIFIC PAGE. 
+ * 
  *
- * It also provides examples of how to generate drop down menus
+ * IT ALSO PROVIDES EXAMPLES OF HOW TO GENERATE DROP DOWN MENUS.
  * 
  * @AUTHOR: ONYENZE CLINTON
  * 
@@ -15,9 +18,9 @@
 class Navigation extends Model{
     
 //CLASS properties
-        private $pageID;   //String: currently selected page
-        private $menuNav;  //Array: array of menu items    
-        private $user;     //User: object of User class
+        private $pageID;            //String: currently selected page
+        private $menuNav;           //Array: array of menu items    
+        private $user;              //User: object of User class
         
 //CLASS methods	
 
@@ -27,8 +30,8 @@ class Navigation extends Model{
             $this->user=$user;
             $this->pageID=$pageID;
             $this->setmenuNav();
-	}
-        //END METHOD: constructor 
+            
+	}//END METHOD: constructor 
       
         //METHOD: setmenuNav()
         public function setmenuNav(){//set the menu items depending on the users selected page ID
@@ -36,14 +39,14 @@ class Navigation extends Model{
             //empty string for menu items
             $this->menuNav='';
             
-            //dropdown menu items for MODULES
-            $dropdownMenuModules='<li class="dropdown">';
-            $dropdownMenuModules.='<a class="dropdown-toggle" data-toggle="dropdown" href="#">Modules<span class="caret"></span></a>';
-            $dropdownMenuModules.='<ul class="dropdown-menu">';
-            $dropdownMenuModules.='<li><a href="'.$_SERVER['PHP_SELF'].'?pageID=modulesViewEdit">View/Edit</a></li>';
-            $dropdownMenuModules.='<li><a href="'.$_SERVER['PHP_SELF'].'?pageID=modulesAdd">Add</a></li>';
-            $dropdownMenuModules.='<li><a href="'.$_SERVER['PHP_SELF'].'?pageID=modulesDelete">Delete</a></li>';
-            $dropdownMenuModules.='</ul></li>'; 
+//            //dropdown menu items for MODULES
+//            $dropdownMenuModules='<li class="dropdown">';
+//            $dropdownMenuModules.='<a class="dropdown-toggle" data-toggle="dropdown" href="#">Modules<span class="caret"></span></a>';
+//            $dropdownMenuModules.='<ul class="dropdown-menu">';
+//            $dropdownMenuModules.='<li><a href="'.$_SERVER['PHP_SELF'].'?pageID=modulesViewEdit">View/Edit</a></li>';
+//            $dropdownMenuModules.='<li><a href="'.$_SERVER['PHP_SELF'].'?pageID=modulesAdd">Add</a></li>';
+//            $dropdownMenuModules.='<li><a href="'.$_SERVER['PHP_SELF'].'?pageID=modulesDelete">Delete</a></li>';
+//            $dropdownMenuModules.='</ul></li>'; 
                                          
             //dropdown menu items for My Account
             $dropdownMenuAccount='<li class="dropdown">';

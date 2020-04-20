@@ -115,11 +115,26 @@ class Account extends Model{
                         $id=$this->db->real_escape_string($this->postArray['User_ID']);
                         $firstName=$this->db->real_escape_string($this->postArray['FirstName']);
                         $lastName=$this->db->real_escape_string($this->postArray['LastName']);  
-                        $mobile=$this->db->real_escape_string($this->postArray['mobile']);   
+                        $mobile=$this->db->real_escape_string($this->postArray['mobile']); 
+                        
+                        //CLINTON - NONE FOR Password and Email
+                        //$id=$this->db->real_escape_string($this->postArray['User_id']);
+                        //$firstName=$this->db->real_escape_string($this->postArray['user_firstname']);
+                        //$lastName=$this->db->real_escape_string($this->postArray['user_lastname']);
+                        //$mobile=$this->db->real_escape_string($this->postArray['user_phone']);  
+                        //$gender=$this->db->real_escape_string($this->postArray['user_gender']);
+                        //$dob=$this->db->real_escape_string($this->postArray['user_dob']);
+                        //$country=$this->db->real_escape_string($this->postArray['user_country']);
+                        //$forgottenAnswer=$this->db->real_escape_string($this->postArray['user_forgotten_answer']);
+                        //$username=$this->db->real_escape_string($this->postArray['user_username']);
 
-                        //generate the SQL
+                        //generate the SQL     //DB         //STRING
                         $sql="UPDATE user SET FirstName = '$firstName',LastName = '$lastName',mobile = '$mobile' WHERE id = '$id'";
 
+                        /*CLINTON- $sql="UPDATE user SET 'user_firstname' = '$firstname',user_lastname='$lastName',user_phone='$mobile',
+                         * user_gender='$gender',user_dob='$dob',user_country='$country',user_forgotten_answer='$forgottenAnswer',user_username='$username'
+                         *WHERE user_id = '$id'"; */
+                        
                         //call the user update record method to save the edited data   
                         if($this->user->saveUpdate($sql)){
                             $this->panelContent_2='Updates saved successfully ';
@@ -131,11 +146,20 @@ class Account extends Model{
                         break;
                     case 'savePasswordChange':
                         //get the values entered in the form
+                        //
                         $pass1=$this->db->real_escape_string($this->postArray['newPass1']);   
                         $pass2=$this->db->real_escape_string($this->postArray['newPass2']);
                         $oldPass=$this->db->real_escape_string($this->postArray['oldPass']);
                         
-                        //fopllow the procedure to change the password
+                        //CLINTON- 
+                        // QUESTION: DO I NEED TO STORE THE OLD AND NEW PASSWORD IN MY DATABASE?
+                        // QUESTION: DOES I NEED TO STORE THIS "newPass1","newPass2" AND "oldPass" TO MY DATABASE?
+                        //$pass1=$this->db->real_escape_string($this->postArray['newPass1']); 
+                        //$pass2=$this->db->real_escape_string($this->postArray['newPass2']);
+                        //$oldPass=$this->db->real_escape_string($this->postArray['oldPass']);
+                        
+                        
+                        //follow the procedure to change the password
                         if($pass1===$pass2){ //check new passwords entered in the form are the same
                             
                             if($this->user->verifyPassword($oldPass)){//verify old password correct

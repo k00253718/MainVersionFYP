@@ -1,10 +1,10 @@
 <?php
 /**
- * Class: UnderConstruction
+ * CLASS: JOB APPLICATION UNDER CONSTRUCTION 
  * 
- * This is a template/empty class that provides 'under construction' content.
+ * THIS IS DISPLAY THE STUDENT APPLICATION CONTENT.
  * 
- * It handles bot logged in and not logged in usee cases. 
+ * IT HANDLES BOTH LOGGED IN AND NOT LOGGED IN STUDENT TRYING TO APPLY FOR A JOB OPPORTUNITY. 
  *
  * @AUTHOR: CLINTON ONYENZE
  * 

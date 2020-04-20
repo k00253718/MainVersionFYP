@@ -1,8 +1,11 @@
 <?php
 /*
- * This view uses the following  PHP variables as content
+ * @AUTHOR: CLINTON ONYENZE
  * 
- * First - get the content from the $data array which is provided by the controller:
+ * THIS VIEW USES THE FOLLOWING PHP VARIABLES AS CONTENT.
+ * 
+ * FIRST: GET THE CONTENT FROM THE $DATA ARRAY:
+ * 
  */
  $pageTitle =   $data['pageTitle'];  //title of the page
  $pageHeading = $data['pageHeading'];//page heading
@@ -13,8 +16,8 @@
  $panelHeadLHS=$data['panelHeadLHS'];// A string containing the LHS panel heading/title
  $panelHeadMID=$data['panelHeadMID'];// A string containing the MIDDLE panel heading/title
  $panelHeadRHS=$data['panelHeadRHS'];// A string containing the RHS panel heading/title
- /*
-  * Then use these values to fill in the 'blank' content of the view
+/*
+  * THEN USE THESE VALUES TO FILL IN THE BLANK CONTENT OF THE VIEW.
   * 
   */
 ?>

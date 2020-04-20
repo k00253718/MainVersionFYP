@@ -1,6 +1,8 @@
 <?php
 /**
- * Class: UnderConstruction
+ * Class: Chat Room Under Construction
+ * 
+ * PLACEMENT OFFICER 
  * 
  * This is a template/empty class that provides 'under construction' content.
  * 

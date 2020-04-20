@@ -119,7 +119,7 @@ class AdminController extends Controller {
                     include_once 'views/view_navbar_2_panel.php'; //load the view
                     break; */   
 
-					case "postJobs":
+		case "postJobs":
                     //create objects to generate view content
                     $sendjobs = new PostJobUnderC($this->user, $this->pageTitle, strtoupper($this->getArray['pageID']));
                     $navigation = new Navigation($this->user, $this->getArray['pageID']);
@@ -147,7 +147,7 @@ class AdminController extends Controller {
                     break;
 					
 					
-					case "viewApplicants":
+		case "viewApplicants":
                     //create objects to generate view content
                     $applicant = new ViewApplicantUnderC($this->user, $this->pageTitle, strtoupper($this->getArray['pageID']));
                     $navigation = new Navigation($this->user, $this->getArray['pageID']);
@@ -361,12 +361,12 @@ class AdminController extends Controller {
             echo '<!-- The Debug SECTION -->';
             echo '<div class="container-fluid"   style="background-color: #AAAAAA">'; //outer DIV
 
-            echo '<h2>Lecturer Controller Class - Debug information</h2><br>';
+            echo '<h2>Placement Officer Controller Class - Debug information</h2><br>';
 
             echo '<div class="container">';  //INNER DIV
             //SECTION 1
             echo '<section style="background-color: #AAAAAA">';
-            echo '<h3>Lecturer Controller (CLASS) properties</h3>';
+            echo '<h3>Placement Officer (CLASS) properties</h3>';
             echo '<section style="background-color: #BBBBB">';
             echo '<h4>User Logged in Status:</h4>';
             echo '<section style="background-color: #FFFFFF">';

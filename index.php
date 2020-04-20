@@ -3,7 +3,7 @@
  * 
  * @AUTHOR: ONYENZE CLINTON
  * 
- * 
+ * THE FIRST PAGE THAT LOADS WHEN THE APPLICATION IS LAUNCHED
  */
 
 session_start(); //join/start a session between thhebrowser client and Apache web server

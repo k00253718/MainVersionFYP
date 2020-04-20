@@ -1,12 +1,15 @@
 <?php
 /*
- * This view uses the following  PHP variables as content
+ * @AUTHOR: CLINTON ONYENZE
  * 
- * First - get the content from the $data array:
+ * THIS VIEW USES THE FOLLOWING PHP VARIABLES AS CONTENT.
+ * 
+ * FIRST: GET THE CONTENT FROM THE $DATA ARRAY:
+ * 
  */
 extract($data);
- /*
-  * Then use these values to fill in the 'blank' content of the view
+/*
+  * THEN USE THESE VALUES TO FILL IN THE BLANK CONTENT OF THE VIEW.
   * 
   */
 ?>
