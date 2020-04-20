@@ -67,10 +67,10 @@ class JobApplicationUnderC extends Model{
     //Panel 1
     public function setPanelHead_1(){//set the panel 1 heading
         if($this->loggedin){
-            $this->panelHead_1='<h3>Apply for Position</h3>';   
+            $this->panelHead_1='<h3>APPLY FOR POSITION</h3>';   
         }
         else{        
-            $this->panelHead_1='<h3>Apply for Position</h3>'; 
+            $this->panelHead_1='<h3>APPLY FOR POSITION</h3>'; 
         }       
     }//end METHOD - //set the panel 1 heading
     public function setPanelContent_1(){//set the panel 1 content
@@ -78,17 +78,17 @@ class JobApplicationUnderC extends Model{
             $this->panelContent_1=file_get_contents('forms/job-application.html');
         }
         else{        
-            $this->panelContent_1='Please Login to Continue Application';
+            $this->panelContent_1='PLEASE LOGIN TO CONTINUE APPLICATION';
         }
     }//end METHOD - //set the panel 1 content        
 
     //Panel 2
     public function setPanelHead_2(){ //set the panel 2 heading
         if($this->loggedin){
-            $this->panelHead_2='<h3>Application Confirmation</h3>';   
+            $this->panelHead_2='<h3>APPLICATION CONFIRMATION</h3>';   
         }
         else{        
-            $this->panelHead_2='<h3>Login to Apply</h3>'; 
+            $this->panelHead_2='<h3>LOGIN TO APPLY</h3>'; 
         }
     }//end METHOD - //set the panel 2 heading        
     public function setPanelContent_2(){//set the panel 2 content
@@ -117,10 +117,10 @@ class JobApplicationUnderC extends Model{
     //Panel 3
     public function setPanelHead_3(){ //set the panel 3 heading
         if($this->loggedin){
-            $this->panelHead_3='<h3>Application Confirmation</h3>';   
+            $this->panelHead_3='<h3>APPLICATION CONFIRMATION</h3>';   
         }
         else{        
-            $this->panelHead_3='<h3>Login to Apply</h3>'; 
+            $this->panelHead_3='<h3>LOGIN TO APPLY</h3>'; 
         }
     } //end METHOD - //set the panel 3 heading
     public function setPanelContent_3(){ //set the panel 2 content

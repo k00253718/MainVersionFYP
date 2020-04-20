@@ -6,7 +6,7 @@
  * 
  * It handles bot logged in and not logged in usee cases. 
  *
- * @author gerry.guinane
+ * @AUTHOR: CLINTON ONYENZE
  * 
  */
 

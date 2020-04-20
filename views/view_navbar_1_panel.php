@@ -1,6 +1,6 @@
 <?php
 /*
- * @AUTHOR: ONYENZE CLINTON
+ * @AUTHOR: CLINTON ONYENZE
  * 
  * This view uses the following  PHP variables as content
  * 
@@ -75,7 +75,7 @@ extract($data);
      
 <div class="row">
     <!--Left Hand Side (LHS) content panel--> 
-    <div class="col-md-6" style="background-color:white;">
+    <div class="col-md-12" style="background-color:white;">
             <div class="panel panel-default">
               <div class="panel-heading"><?php echo $panelHeadLHS; ?></div>
               <div class="panel-body">
@@ -84,18 +84,8 @@ extract($data);
             </div>
     </div>
 
-   <!-- Right Hand Side (RHS) content panel -->
-    <div class="col-md-6" style="background-color:white;">
-            <div class="panel panel-default">
-              <div class="panel-heading"><?php echo $panelHeadRHS; ?></div>
-              <div class="panel-body">
-                    <?php echo $stringRHS; ?>
-              </div>
-            </div>
-    </div>
-    
+
 </div>
 
 </div>  <!--end of main content container-->
 </div>  <!--end of main container-->
-                             		

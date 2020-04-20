@@ -67,10 +67,10 @@ class ViewJobsUnderC extends Model{
     //Panel 1
     public function setPanelHead_1(){//set the panel 1 heading
         if($this->loggedin){
-            $this->panelHead_1='<h3>Filter Jobs</h3>';   
+            $this->panelHead_1='<h3>FILTER JOBS</h3>';   
         }
         else{        
-            $this->panelHead_1='<h3>Login to Filter Jobs</h3>'; 
+            $this->panelHead_1='<h3>LOGIN TO FILTER JOBS</h3>'; 
         }       
     }//end METHOD - //set the panel 1 heading
     public function setPanelContent_1(){//set the panel 1 content
@@ -85,10 +85,10 @@ class ViewJobsUnderC extends Model{
     //Panel 2
     public function setPanelHead_2(){ //set the panel 2 heading
         if($this->loggedin){
-            $this->panelHead_2='<h3>Job Full Description</h3>';   
+            $this->panelHead_2='<h3>JOB FULL DESCRIPTION</h3>';   
         }
         else{        
-            $this->panelHead_2='<h3>Job Full Description</h3>'; 
+            $this->panelHead_2='<h3>JOB FULL DESCRIPTION</h3>'; 
         }
     }//end METHOD - //set the panel 2 heading        
     public function setPanelContent_2(){//set the panel 2 content
@@ -113,10 +113,10 @@ class ViewJobsUnderC extends Model{
     //Panel 3
     public function setPanelHead_3(){ //set the panel 3 heading
         if($this->loggedin){
-            $this->panelHead_3='<h3>Job Brief</h3>';   
+            $this->panelHead_3='<h3>JOB BRIEF</h3>';   
         }
         else{        
-            $this->panelHead_3='<h3>Job Brief</h3>'; 
+            $this->panelHead_3='<h3>JOB BRIEF</h3>'; 
         }
     } //end METHOD - //set the panel 3 heading
     

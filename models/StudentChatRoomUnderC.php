@@ -1,6 +1,6 @@
 <?php
 /**
- * Class: UnderConstruction
+ * Class: Student Chat Room UnderConstruction
  * 
  * This is a template/empty class that provides 'under construction' content.
  * 
@@ -67,18 +67,26 @@ class StudentChatRoomUnderC extends Model{
     //Panel 1
     public function setPanelHead_1(){//set the panel 1 heading
         if($this->loggedin){
-            $this->panelHead_1='<h3>Panel 1</h3>';   
+            $this->panelHead_1='<h3>WORK PLACEMENT APPLICATION CHAT ROOM</h3>';   
         }
         else{        
-            $this->panelHead_1='<h3>Panel 1</h3>'; 
+            $this->panelHead_1='<h3>WORK PLACEMENT APPLICATION CHAT ROOM</h3>'; 
         }       
     }//end METHOD - //set the panel 1 heading
     public function setPanelContent_1(){//set the panel 1 content
         if($this->loggedin){
-            $this->panelContent_1="Panel 1 content for <b>$this->pageHeading</b> menu item is under construction.  This message appears if user is in logged ON state.";
+            $this->panelContent_1="Implement a chat room that looks like the image below".'</br>'.'</br>';
+			
+            $this->panelContent_1.='<img src="images/intended-chat-room-page.png" alt="Chat Room" /> ';
+			
+			
+			
+			
+			
+			
         }
         else{        
-            $this->panelContent_1="Panel 1 content for <b>$this->pageHeading</b> menu item is under construction.  This message appears if user is in logged OFF state.";;
+            $this->panelContent_1="User must register and Login to use the chat room";
         }
     }//end METHOD - //set the panel 1 content        
 

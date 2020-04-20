@@ -20,11 +20,12 @@ class AdminController extends Controller {
     private $db;                                                                          //DATABASE SYSTEM
     private $pageTitle;                                                                   //PAGE TITLE 
 
-//CLASS MTHODS
+//CLASS METHODS
 
     //METHOD: CONSTRUCTOR
     
     function __construct($user,$db) { 
+	
         parent::__construct($user->getLoggedinState());
         
     //INITIALISE ALL THE CLASS PROPERTIES
@@ -69,6 +70,7 @@ class AdminController extends Controller {
     public function updateView() { //update the VIEW based on the users page selection
         if (isset($this->getArray['pageID'])) { //check if a page id is contained in the URL
             switch ($this->getArray['pageID']) {
+				
                 case "home":
                     //create objects to generate view content
                     $home = new Home($this->user, $this->pageTitle, strtoupper($this->getArray['pageID']));
@@ -81,19 +83,23 @@ class AdminController extends Controller {
                     $data['pageTitle'] = $home->getPageTitle();
                     $data['pageHeading'] = $home->getPageHeading();
                     
-                    $data['pageTitle'] = $home->getPageTitle();
-                    $data['pageHeading'] = $home->getPageHeading();
+                  /*   $data['pageTitle'] = $home->getPageTitle();
+                    $data['pageHeading'] = $home->getPageHeading(); */
                     $data['panelHeadLHS'] = $home->getPanelHead_1(); // A string containing the LHS panel heading/title
                     //$data['panelHeadMID'] = $home->getPanelHead_2();
                     $data['panelHeadRHS'] = $home->getPanelHead_2(); // A string containing the RHS panel heading/title
                     $data['stringLHS'] = $home->getPanelContent_1();     // A string intended of the Left Hand Side of the page
                     //$data['stringMID'] = $home->getPanelContent_2();     // A string intended of the Left Hand Side of the page
                     $data['stringRHS'] = $home->getPanelContent_2();     // A string intended of the Right Hand Side of the page
+					
+					
                     //
                     //update the view
-                    include_once 'views/view_navbar_2_panel.php';  //load the view                      
-                    break;              
-                case "register":
+                    include_once 'views/view_navbar_2_panel.php';  //load the view          
+					
+                    break;  
+					
+/*                 case "register":
                     //get the model
                     $register = new Register($this->postArray,$this->pageTitle, strtoupper($this->getArray['pageID']),$this->db,$this->user);
                     $navigation = new Navigation($this->user, $this->getArray['pageID']);
@@ -111,7 +117,91 @@ class AdminController extends Controller {
                     $this->viewData = $data;  //put the content array into a class property for diagnostic purposes
                     //update the view
                     include_once 'views/view_navbar_2_panel.php'; //load the view
-                    break;            
+                    break; */   
+
+					case "postJobs":
+                    //create objects to generate view content
+                    $sendjobs = new PostJobUnderC($this->user, $this->pageTitle, strtoupper($this->getArray['pageID']));
+                    $navigation = new Navigation($this->user, $this->getArray['pageID']);
+                    array_push($this->controllerObjects,$sendjobs,$navigation);
+                    
+                    //get the content from the navigation model - put into the $data array for the view:
+                    $data['menuNav'] = $navigation->getMenuNav();       // an array of menu items and associated URLS
+                    //get the content from the page content model  - put into the $data array for the view:
+                    $data['pageTitle'] = $sendjobs->getPageTitle();
+                    $data['pageHeading'] = $sendjobs->getPageHeading();
+                    
+                    $data['pageTitle'] = $sendjobs->getPageTitle();
+                    $data['pageHeading'] = $sendjobs->getPageHeading();
+                    $data['panelHeadLHS'] = $sendjobs->getPanelHead_1(); // A string containing the LHS panel heading/title
+                    $data['panelHeadMID'] = $sendjobs->getPanelHead_2();
+                    $data['panelHeadRHS'] = $sendjobs->getPanelHead_3(); // A string containing the RHS panel heading/title
+                    $data['stringLHS'] = $sendjobs->getPanelContent_1();     // A string intended of the Left Hand Side of the page
+                    $data['stringMID'] = $sendjobs->getPanelContent_2();     // A string intended of the Left Hand Side of the page
+                    $data['stringRHS'] = $sendjobs->getPanelContent_3();     // A string intended of the Right Hand Side of the page
+                    $this->viewData = $data;
+					
+					//
+                    //update the view
+                    include_once 'views/view_navbar_3_panel.php';  //load the view                      
+                    break;
+					
+					
+					case "viewApplicants":
+                    //create objects to generate view content
+                    $applicant = new ViewApplicantUnderC($this->user, $this->pageTitle, strtoupper($this->getArray['pageID']));
+                    $navigation = new Navigation($this->user, $this->getArray['pageID']);
+                    array_push($this->controllerObjects,$applicant,$navigation);
+                    
+                    //get the content from the navigation model - put into the $data array for the view:
+                    $data['menuNav'] = $navigation->getMenuNav();       // an array of menu items and associated URLS
+                    //get the content from the page content model  - put into the $data array for the view:
+                    $data['pageTitle'] = $applicant->getPageTitle();
+                    $data['pageHeading'] = $applicant->getPageHeading();
+                    
+                    $data['pageTitle'] = $applicant->getPageTitle();
+                    $data['pageHeading'] = $applicant->getPageHeading();
+                    $data['panelHeadLHS'] = $applicant->getPanelHead_1(); // A string containing the LHS panel heading/title
+                    $data['panelHeadMID'] = $applicant->getPanelHead_2();
+                    $data['panelHeadRHS'] = $applicant->getPanelHead_3(); // A string containing the RHS panel heading/title
+                    $data['stringLHS'] = $applicant->getPanelContent_1();     // A string intended of the Left Hand Side of the page
+                    $data['stringMID'] = $applicant->getPanelContent_2();     // A string intended of the Left Hand Side of the page
+                    $data['stringRHS'] = $applicant->getPanelContent_3();     // A string intended of the Right Hand Side of the page
+                    $this->viewData = $data;
+					
+					//
+                    //update the view
+                    include_once 'views/view_navbar_3_panel.php';  //load the view                      
+                    break; 
+                
+                case "chatRoom":
+                    //create objects to generate view content
+                    $chat = new ChatRoomUnderC($this->user, $this->pageTitle, strtoupper($this->getArray['pageID']));
+                    $navigation = new Navigation($this->user, $this->getArray['pageID']);
+                    array_push($this->controllerObjects,$chat,$navigation);
+                    
+                    //get the content from the navigation model - put into the $data array for the view:
+                    $data['menuNav'] = $navigation->getMenuNav();       // an array of menu items and associated URLS
+                    //get the content from the page content model  - put into the $data array for the view:
+                    $data['pageTitle'] = $chat->getPageTitle();
+                    $data['pageHeading'] = $chat->getPageHeading();
+                    
+                    $data['pageTitle'] = $chat->getPageTitle();
+                    $data['pageHeading'] = $chat->getPageHeading();
+                    $data['panelHeadLHS'] = $chat->getPanelHead_1(); // A string containing the LHS panel heading/title
+                    $data['panelHeadMID'] = $chat->getPanelHead_2();
+                    $data['panelHeadRHS'] = $chat->getPanelHead_2(); // A string containing the RHS panel heading/title
+                    $data['stringLHS'] = $chat->getPanelContent_1();     // A string intended of the Left Hand Side of the page
+                    $data['stringMID'] = $chat->getPanelContent_2();     // A string intended of the Left Hand Side of the page
+                    $data['stringRHS'] = $chat->getPanelContent_2();     // A string intended of the Right Hand Side of the page
+                    $this->viewData = $data;
+					
+					//
+                    //update the view
+                    include_once 'views/view_navbar_1_panel.php';  //load the view                      
+                    break; 
+					
+					
                 case "accountEdit":
                     //get the model
                     $register = new Account($this->postArray,$this->pageTitle, strtoupper($this->getArray['pageID']),$this->db,$this->user,$this->getArray['pageID']);
@@ -149,8 +239,10 @@ class AdminController extends Controller {
                     $this->viewData = $data;  //put the content array into a class property for diagnostic purposes
                     //update the view
                     include_once 'views/view_navbar_2_panel.php'; //load the view
-                    break;                
-                case 'login':                   
+                    break;  
+
+					
+/*                 case 'login':                   
                     //process the login details from the login form if the button has been pressed
                     if(isset($this->postArray['btnLogin'])){  //check that the login button is pressed
                         $this->loggedin=$this->user->login($this->postArray['userID'], $this->postArray['password']);                       
@@ -176,7 +268,8 @@ class AdminController extends Controller {
                     $this->viewData = $data;  //put the content array into a class property for diagnostic purposes
                     //update the view
                     include_once 'views/view_navbar_2_panel.php'; //load the view                  
-                    break;
+                    break; */
+					
                 case "logout":                    
                     //Change the login state to false
                     $this->user->logout(FALSE);
@@ -204,80 +297,7 @@ class AdminController extends Controller {
                     include_once 'views/view_navbar_2_panel.php'; //load the view                  
                     break;
                 
-                case "postJob":
-                    //create objects to generate view content
-                    $home = new UnderConstruction($this->user, $this->pageTitle, strtoupper($this->getArray['pageID']));
-                    $navigation = new Navigation($this->user, $this->getArray['pageID']);
-                    array_push($this->controllerObjects,$home,$navigation);
-                    
-                    //get the content from the navigation model - put into the $data array for the view:
-                    $data['menuNav'] = $navigation->getMenuNav();       // an array of menu items and associated URLS
-                    //get the content from the page content model  - put into the $data array for the view:
-                    $data['pageTitle'] = $home->getPageTitle();
-                    $data['pageHeading'] = $home->getPageHeading();
-                    
-                    $data['pageTitle'] = $home->getPageTitle();
-                    $data['pageHeading'] = $home->getPageHeading();
-                    $data['panelHeadLHS'] = $home->getPanelHead_1(); // A string containing the LHS panel heading/title
-                    //$data['panelHeadMID'] = $home->getPanelHead_2();
-                    $data['panelHeadRHS'] = $home->getPanelHead_2(); // A string containing the RHS panel heading/title
-                    $data['stringLHS'] = $home->getPanelContent_1();     // A string intended of the Left Hand Side of the page
-                    //$data['stringMID'] = $home->getPanelContent_2();     // A string intended of the Left Hand Side of the page
-                    $data['stringRHS'] = $home->getPanelContent_2();     // A string intended of the Right Hand Side of the page
-                    //
-                    //update the view
-                    include_once 'views/view_navbar_2_panel.php';  //load the view                      
-                    break;  
-                
-                case "viewApplicants":
-                    //create objects to generate view content
-                    $home = new UnderConstruction($this->user, $this->pageTitle, strtoupper($this->getArray['pageID']));
-                    $navigation = new Navigation($this->user, $this->getArray['pageID']);
-                    array_push($this->controllerObjects,$home,$navigation);
-                    
-                    //get the content from the navigation model - put into the $data array for the view:
-                    $data['menuNav'] = $navigation->getMenuNav();       // an array of menu items and associated URLS
-                    //get the content from the page content model  - put into the $data array for the view:
-                    $data['pageTitle'] = $home->getPageTitle();
-                    $data['pageHeading'] = $home->getPageHeading();
-                    
-                    $data['pageTitle'] = $home->getPageTitle();
-                    $data['pageHeading'] = $home->getPageHeading();
-                    $data['panelHeadLHS'] = $home->getPanelHead_1(); // A string containing the LHS panel heading/title
-                    $data['panelHeadMID'] = $home->getPanelHead_2();
-                    $data['panelHeadRHS'] = $home->getPanelHead_2(); // A string containing the RHS panel heading/title
-                    $data['stringLHS'] = $home->getPanelContent_1();     // A string intended of the Left Hand Side of the page
-                    $data['stringMID'] = $home->getPanelContent_2();     // A string intended of the Left Hand Side of the page
-                    $data['stringRHS'] = $home->getPanelContent_2();     // A string intended of the Right Hand Side of the page
-                    //
-                    //update the view
-                    include_once 'views/view_navbar_3_panel.php';  //load the view                      
-                    break; 
-                
-                case "chatRoom":
-                    //create objects to generate view content
-                    $home = new UnderConstruction($this->user, $this->pageTitle, strtoupper($this->getArray['pageID']));
-                    $navigation = new Navigation($this->user, $this->getArray['pageID']);
-                    array_push($this->controllerObjects,$home,$navigation);
-                    
-                    //get the content from the navigation model - put into the $data array for the view:
-                    $data['menuNav'] = $navigation->getMenuNav();       // an array of menu items and associated URLS
-                    //get the content from the page content model  - put into the $data array for the view:
-                    $data['pageTitle'] = $home->getPageTitle();
-                    $data['pageHeading'] = $home->getPageHeading();
-                    
-                    $data['pageTitle'] = $home->getPageTitle();
-                    $data['pageHeading'] = $home->getPageHeading();
-                    $data['panelHeadLHS'] = $home->getPanelHead_1(); // A string containing the LHS panel heading/title
-                    $data['panelHeadMID'] = $home->getPanelHead_2();
-                    $data['panelHeadRHS'] = $home->getPanelHead_2(); // A string containing the RHS panel heading/title
-                    $data['stringLHS'] = $home->getPanelContent_1();     // A string intended of the Left Hand Side of the page
-                    $data['stringMID'] = $home->getPanelContent_2();     // A string intended of the Left Hand Side of the page
-                    $data['stringRHS'] = $home->getPanelContent_2();     // A string intended of the Right Hand Side of the page
-                    //
-                    //update the view
-                    include_once 'views/view_navbar_2_panel.php';  //load the view                      
-                    break; 
+
                 
                 default:
                     //no page selected by user/landing page
@@ -330,7 +350,7 @@ class AdminController extends Controller {
             
             $this->viewData = $data;  //put the content array into a class property for diagnostic purposes
             //update the view
-            include_once 'views/view_navbar_2_panel.php';  //load the view
+            include_once 'views/view_navbar_3_panel.php';  //load the view
         }
     }
     //END METHOD: updateView()
@@ -407,9 +427,6 @@ class AdminController extends Controller {
             echo '</div>';  //END outer DIV
             echo '</section>';
         
-    }
-    //END METHOD: debug()
+    }//END METHOD: debug()
      
-}
-
-//end CLASS
+}//end CLASS

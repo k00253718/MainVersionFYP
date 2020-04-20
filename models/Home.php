@@ -82,6 +82,8 @@ class Home extends Model{
                 
                 $this->panelContent_1='<p>YOU NEED TO REGISTER AS A STUDENT OR PLACEMENT OFFICER.'; 
              
+				$this->panelContent_1.='<img src="images/General-Homepage.jpg" alt="HomePage" /> ';
+			 
                 $this->panelContent_1.= file_get_contents('forms/homeLeft.html');  
             }
         }//end METHOD - //set the panel 1 content        
@@ -101,7 +103,7 @@ class Home extends Model{
                 
                 if ($this->user->getUserType()==='ADMINISTRATOR'){ //A Placement officer is logged in
                     $this->panelContent_2=' Thank you ' .$this->user->getUserFirstName().' '. $this->user->getUserLastName() .' for logging in successfully as PLACEMENT OFFICER and ADMINISTRATOR.'.'</br>'.'</br>';
-                    $this->panelContent_2.='PLEASE INSERT IMAGE'.'</br>'.'</br>'.'</br>';
+                    $this->panelContent_2.='<img src="images/placement-officers.jpg" alt="placement-officers" /> '.'<br/>'.'</br>'.'</br>';
                     $this->panelContent_2.='<h3>USER FUNCTIONALITIES</h3>'.'</br>';
                     $this->panelContent_2.='Post Available Work Placement Opportunities'.'</br>'.'</br>';
                     $this->panelContent_2.='View Job Applicants'.'</br>'.'</br>';
@@ -110,7 +112,7 @@ class Home extends Model{
                 }
                 else{ //a Student is logged in
                     $this->panelContent_2=' Thank you ' .$this->user->getUserFirstName().' '. $this->user->getUserLastName() .' for logging in successfully as a STUDENT.'.'</br>'.'</br>';
-                    $this->panelContent_2.='PLEASE INSERT IMAGE'.'</br>'.'</br>'.'</br>';
+                    $this->panelContent_2.='<img src="images/students.jpg" alt="students" /> '.'</br>'.'</br>'.'</br>';
                     $this->panelContent_2.='<h3>USER FUNCTIONALITIES</h3>'.'</br>';
                     $this->panelContent_2.='View Available Work Placement Opportunities'.'</br>'.'</br>';
                     $this->panelContent_2.='Apply Available Work Placement Opportunities'.'</br>'.'</br>';
@@ -126,18 +128,37 @@ class Home extends Model{
         //Panel 3
         public function setPanelHead_3(){ //set the panel 3 heading
             if($this->loggedin){
-                $this->panelHead_3='<h3>Adverts</h3>';
+                $this->panelHead_3='<h2>FOOTER INFORMATION</h2>';
             }
             else{        
-                $this->panelHead_3='<h3>Adverts</h3>';
+                $this->panelHead_3='<h2>FOOTER INFORMATION</h2>';
             } 
         } //end METHOD - //set the panel 3 heading  
         public function setPanelContent_3(){ //set the panel 2 content
-            if($this->loggedin){  
-                $this->panelContent_3='Panel 3 content';
+            if($this->loggedin){ 
+
+			if ($this->user->getUserType()==='ADMINISTRATOR'){ //A Placement officer is logged in
+                    $this->panelContent_2=' Thank you ' .$this->user->getUserFirstName().' '. $this->user->getUserLastName() .' for logging in successfully as PLACEMENT OFFICER and ADMINISTRATOR.'.'</br>'.'</br>';
+                    $this->panelContent_2.='<img src="images/placement-officers.jpg" alt="placement-officers" /> '.'<br/>'.'</br>'.'</br>';
+                    $this->panelContent_2.='<h3>USER FUNCTIONALITIES</h3>'.'</br>';
+                    $this->panelContent_2.='Post Available Work Placement Opportunities'.'</br>'.'</br>';
+                    $this->panelContent_2.='View Job Applicants'.'</br>'.'</br>';
+                    $this->panelContent_2.='Chat with Other Users through the Chat Room'.'</br>'.'</br>';
+                    $this->panelContent_2.='Don\'t forget to LOGOUT when you are done';
+                }
+                else{ //a Student is logged in
+                    $this->panelContent_2=' Thank you ' .$this->user->getUserFirstName().' '. $this->user->getUserLastName() .' for logging in successfully as a STUDENT.'.'</br>'.'</br>';
+                    $this->panelContent_2.='<img src="images/students.jpg" alt="students" /> '.'</br>'.'</br>'.'</br>';
+                    $this->panelContent_2.='<h3>USER FUNCTIONALITIES</h3>'.'</br>';
+                    $this->panelContent_2.='View Available Work Placement Opportunities'.'</br>'.'</br>';
+                    $this->panelContent_2.='Apply Available Work Placement Opportunities'.'</br>'.'</br>';
+                    $this->panelContent_2.='Chat with Other Users through the Chat Room'.'</br>'.'</br>';
+                    $this->panelContent_2.='Don\'t forget to LOGOUT when you are done';
+                }   
+               // $this->panelContent_3=file_get_contents('forms/homeRight.html');
             }
             else{        
-                $this->panelContent_3='Panel 3 content';
+                $this->panelContent_3=file_get_contents('forms/homeRight.html');
             } 
         }  //end METHOD - //set the panel 2 content        
        

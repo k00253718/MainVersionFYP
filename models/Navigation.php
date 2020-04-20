@@ -56,6 +56,7 @@ class Navigation extends Model{
             if($this->loggedin){  //if user is logged in           
                 if ($this->user->getUserType()==='ADMINISTRATOR'){  //check if the logged in user is an ADMINISTRATOR
                     switch ($this->pageID) {
+						
                     case "HOME":
                         //$this->menuNav.='<li><a href="'.$_SERVER['PHP_SELF'].'?pageID=home">HOME</a></li>';
                         $this->menuNav.='<li><a href="'.$_SERVER['PHP_SELF'].'?pageID=postJobs">POST JOBS</a></li>';
@@ -102,7 +103,7 @@ class Navigation extends Model{
                         $this->menuNav.='<li><a href="'.$_SERVER['PHP_SELF'].'?pageID=logout">LOG OUT</a></li>';
                         break;                  
                     default:
-                        //$this->menuNav.='<li><a href="'.$_SERVER['PHP_SELF'].'?pageID=home">HOME</a></li>';
+                        $this->menuNav.='<li><a href="'.$_SERVER['PHP_SELF'].'?pageID=home">HOME</a></li>';
                         $this->menuNav.='<li><a href="'.$_SERVER['PHP_SELF'].'?pageID=postJobs">POST JOBS</a></li>';
                         $this->menuNav.='<li><a href="'.$_SERVER['PHP_SELF'].'?pageID=viewApplicants">VIEW APPLICANTS</a></li>';
                         $this->menuNav.='<li><a href="'.$_SERVER['PHP_SELF'].'?pageID=chatRoom">CHAT ROOM</a></li>';

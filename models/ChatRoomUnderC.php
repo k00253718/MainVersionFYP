@@ -67,18 +67,20 @@ class ChatRoomUnderC extends Model{
     //Panel 1
     public function setPanelHead_1(){//set the panel 1 heading
         if($this->loggedin){
-            $this->panelHead_1='<h3>Panel 1</h3>';   
+            $this->panelHead_1='<h3>WORK PLACEMENT APP CHAT ROOOM</h3>';   
         }
         else{        
-            $this->panelHead_1='<h3>Panel 1</h3>'; 
+            $this->panelHead_1='<h3>WORK PLACEMENT APP CHAT ROOOM</h3>'; 
         }       
     }//end METHOD - //set the panel 1 heading
     public function setPanelContent_1(){//set the panel 1 content
         if($this->loggedin){
-            $this->panelContent_1="Panel 1 content for <b>$this->pageHeading</b> menu item is under construction.  This message appears if user is in logged ON state.";
+            $this->panelContent_1="Implement a chat room that looks like the image below".'</br>'.'</br>';
+			
+            $this->panelContent_1.='<img src="images/intended-chat-room-page.png" alt="Chat Room" /> ';
         }
         else{        
-            $this->panelContent_1="Panel 1 content for <b>$this->pageHeading</b> menu item is under construction.  This message appears if user is in logged OFF state.";;
+            $this->panelContent_1="Panel 1 content for <b>$this->pageHeading</b> menu item is under construction.  This message appears if user is in logged OFF state.";
         }
     }//end METHOD - //set the panel 1 content        
 
@@ -93,10 +95,10 @@ class ChatRoomUnderC extends Model{
     }//end METHOD - //set the panel 2 heading        
     public function setPanelContent_2(){//set the panel 2 content
         if($this->loggedin){
-            $this->panelContent_2="Panel 2 content for <b>$this->pageHeading</b> menu item is under construction.  This message appears if user is in logged ON state.";;
+            $this->panelContent_2="Panel 2 content for <b>$this->pageHeading</b> menu item is under construction.  This message appears if user is in logged ON state.";
         }
         else{        
-            $this->panelContent_2="Panel 2 content for <b>$this->pageHeading</b> menu item is under construction.  This message appears if user is in logged OFF state.";;
+            $this->panelContent_2="Panel 2 content for <b>$this->pageHeading</b> menu item is under construction.  This message appears if user is in logged OFF state.";
         }
     }//end METHOD - //set the panel 2 content  
 

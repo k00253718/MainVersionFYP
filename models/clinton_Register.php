@@ -92,7 +92,7 @@ class Register extends Model{
     
     public function setPanelHead_1(){               //SET THE PANEL 1 HEADING 
             
-    $this->panelHead_1='<h3>Registration Form</h3>';       
+    $this->panelHead_1='<h3>REGISTRATION FORM</h3>';       
         
     }//END METHOD - //SET THE PANEL 1 HEADING 
     
@@ -108,7 +108,7 @@ class Register extends Model{
     
     public function setPanelHead_2(){               //SET THE PANEL 2 HEADING        
             
-    $this->panelHead_2='<h3>Registration Result</h3>'; 
+    $this->panelHead_2='<h3>REGISTRATION RESULT </h3>'; 
             
     }//END METHOD - //SET THE PANEL 2 HEADING   
     

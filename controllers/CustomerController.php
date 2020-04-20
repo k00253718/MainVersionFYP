@@ -74,10 +74,10 @@ class CustomerController extends Controller {
                     $data['pageTitle'] = $home->getPageTitle();
                     $data['pageHeading'] = $home->getPageHeading();
                     $data['panelHeadLHS'] = $home->getPanelHead_1(); // A string containing the LHS panel heading/title
-                    //$data['panelHeadMID'] = $home->getPanelHead_2();
+                    $data['panelHeadMID'] = $home->getPanelHead_2();
                     $data['panelHeadRHS'] = $home->getPanelHead_2(); // A string containing the RHS panel heading/title
                     $data['stringLHS'] = $home->getPanelContent_1();     // A string intended of the Left Hand Side of the page
-                    //$data['stringMID'] = $home->getPanelContent_2();     // A string intended of the Left Hand Side of the page
+                    $data['stringMID'] = $home->getPanelContent_2();     // A string intended of the Left Hand Side of the page
                     $data['stringRHS'] = $home->getPanelContent_2();     // A string intended of the Right Hand Side of the page
                     $this->viewData = $data;  //put the content array into a class property for diagnostic purposes
                     //
@@ -135,7 +135,7 @@ class CustomerController extends Controller {
                 
                 case "chatRoom":
                     //create objects to generate view content
-                    $chat = new ChatRoomUnderC ($this->user, $this->pageTitle, strtoupper($this->getArray['pageID']));
+                    $chat = new StudentChatRoomUnderC ($this->user, $this->pageTitle, strtoupper($this->getArray['pageID']));
                     $navigation = new Navigation($this->user, $this->getArray['pageID']);
                     array_push($this->controllerObjects,$chat,$navigation);
                     
@@ -155,7 +155,7 @@ class CustomerController extends Controller {
                     $data['stringRHS'] = $chat->getPanelContent_3();     // A string intended of the Right Hand Side of the page
                     //
                     //update the view
-                    include_once 'views/view_navbar_3_panel.php';  //load the view                      
+                    include_once 'views/view_navbar_1_panel.php';  //load the view                      
                     break; 
 
                 case "accountEdit":
@@ -247,7 +247,7 @@ class CustomerController extends Controller {
                     $data['stringRHS'] = $home->getPanelContent_3();     // A string intended of the Right Hand Side of the page
                     $this->viewData = $data;  //put the content array into a class property for diagnostic purposes
                     //update the view
-                    include_once 'views/view_navbar_3_panel.php';
+                    include_once 'views/view_navbar_2_panel.php';
                     break;
             }
         } 
@@ -271,7 +271,7 @@ class CustomerController extends Controller {
             $data['stringRHS'] = $home->getPanelContent_3();     // A string intended of the Right Hand Side of the page
             $this->viewData = $data;  //put the content array into a class property for diagnostic purposes
             //update the view
-            include_once 'views/view_navbar_3_panel.php';  //load the view
+            include_once 'views/view_navbar_2_panel.php';  //load the view
         }
     }
     //END METHOD: updateView()

@@ -93,13 +93,13 @@ class Login extends Model{
             
         if($this->loggedin){  
             
-        $this->panelHead_1='<h3>Login Successful</h3>'; 
+        $this->panelHead_1='<h3>LOGIN SUCCESSFUL</h3>'; 
             
         }
             
         else{        
                 
-        $this->panelHead_1='<h3>Login Form</h3>'; 
+        $this->panelHead_1='<h3>LOGIN FORM</h3>'; 
             
         }       
         
@@ -127,12 +127,12 @@ class Login extends Model{
             
         if($this->loggedin){
                 
-        $this->panelHead_2='<h3>Result</h3>';   
+        $this->panelHead_2='<h3>RESULT</h3>';   
             
         }
             
         else{        
-                $this->panelHead_2='<h3>Result</h3>'; 
+                $this->panelHead_2='<h3>RESULT</h3>'; 
         }
        
         }//END METHOD - SET THE PANEL 2 HEADING      

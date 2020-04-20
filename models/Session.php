@@ -5,7 +5,7 @@
  * The Session Class is responsible for persistance of user data between page requests. 
  * Data is stored in the superglobal array $_SESSION
  *
- * @author gerry.guinane
+ * @AUTHOR: CLINTON ONYENZE
  */
 class Session { 
     

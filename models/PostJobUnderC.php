@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Class: UnderConstruction
  * 
@@ -67,7 +68,7 @@ class PostJobUnderC extends Model{
     //Panel 1
     public function setPanelHead_1(){//set the panel 1 heading
         if($this->loggedin){
-            $this->panelHead_1='<h3>Work Placement Opportunity </h3>';   
+            $this->panelHead_1='<h3>UPLOAD A JOB</h3>';   
         }
         else{        
             $this->panelHead_1='<h3>Work Placement Opportunity </h3>'; 
@@ -76,7 +77,7 @@ class PostJobUnderC extends Model{
     public function setPanelContent_1(){//set the panel 1 content
         if($this->loggedin){
             $this->panelContent_1=file_get_contents('forms/post-job.html');
-            $this->panelContent_1.=file_get_contents('forms/delete-job.html');
+            
         }
         else{        
             $this->panelContent_1=file_get_contents('forms/clinton_form_signIn.html');
@@ -86,7 +87,7 @@ class PostJobUnderC extends Model{
     //Panel 2
     public function setPanelHead_2(){ //set the panel 2 heading
         if($this->loggedin){
-            $this->panelHead_2='<h3>Job Posting Confirmation</h3>';   
+            $this->panelHead_2='<h3>FULL JOB POSTING DETAILS</h3>';   
         }
         else{        
             $this->panelHead_2='<h3>Job Posting Confirmation</h3>'; 
@@ -94,17 +95,52 @@ class PostJobUnderC extends Model{
     }//end METHOD - //set the panel 2 heading        
     public function setPanelContent_2(){//set the panel 2 content
         if($this->loggedin){
-            $this->panelContent_2='Display Job Posting Details '; 
+			
+            $this->panelContent_2='JOB ID:'.'</br>'.'</br>';
+			
+			$this->panelContent_2.='Html name is jobID'.'</br>'.'</br>'; 
+			
+			$this->panelContent_2.='JOB TITLE:'.'</br>'.'</br>'; 
+			
+			$this->panelContent_2.='Html name is jobTitle'.'</br>'.'</br>'; 
+			
+			$this->panelContent_2.='JOB LOCATION:'.'</br>'.'</br>'; 
+			
+			$this->panelContent_2.='Html name is jobLocation'.'</br>'.'</br>'; 
+			
+			$this->panelContent_2.='COMPANY NAME:'.'</br>'.'</br>'; 
+			
+			$this->panelContent_2.='Html name is companyName'.'</br>'.'</br>';
+
+			$this->panelContent_2.='JOB DESCRIPTION:'.'</br>'.'</br>'; 
+			
+			$this->panelContent_2.='Html name is jobDescription'.'</br>'.'</br>'; 	
+
+			$this->panelContent_2.='JOB SALARY:'.'</br>'.'</br>'; 
+			
+			$this->panelContent_2.='Html name is jobSalary'.'</br>'.'</br>'; 
+
+			$this->panelContent_2.='JOB TYPE:'.'</br>'.'</br>'; 
+			
+			$this->panelContent_2.='Html name is jobType'.'</br>'.'</br>';
+
+			$this->panelContent_2.='JOB DURATION:'.'</br>'.'</br>'; 
+			
+			$this->panelContent_2.='Html name is jobDuration'.'</br>'.'</br>'; 
+
+			$this->panelContent_2.='JOB QUALIFICATION:'.'</br>'.'</br>'; 
+			
+			$this->panelContent_2.='Html name is jobQualification'.'</br>'.'</br>';  			
         }
         else{        
-            $this->panelContent_2='Login to Post Jobs and COnfirmation job posting';
+            $this->panelContent_2='Login to Post Jobs and Confirmation job posting';
         }
     }//end METHOD - //set the panel 2 content  
 
     //Panel 3
     public function setPanelHead_3(){ //set the panel 3 heading
         if($this->loggedin){
-            $this->panelHead_3='<h3>Job Posting Confirmation</h3>';  
+            $this->panelHead_3='<h3>DELETE A JOB</h3>';  
         }
         else{        
             $this->panelHead_3='<h3>Job Posting Confirmation</h3>';   
@@ -112,7 +148,7 @@ class PostJobUnderC extends Model{
     } //end METHOD - //set the panel 3 heading
     public function setPanelContent_3(){ //set the panel 2 content
         if($this->loggedin){
-            $this->panelContent_3='Display Job Posting Details ';
+         $this->panelContent_3=file_get_contents('forms/delete-job.html');
         }
         else{        
             $this->panelContent_3='Login to Post Jobs and COnfirmation job posting';

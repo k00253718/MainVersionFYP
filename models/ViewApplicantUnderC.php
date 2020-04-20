@@ -67,10 +67,10 @@ class ViewApplicantUnderC extends Model{
     //Panel 1
     public function setPanelHead_1(){//set the panel 1 heading
         if($this->loggedin){
-            $this->panelHead_1='<h3>Applications</h3>';   
+            $this->panelHead_1='<h3>VIEW JOB APPLICATIONS</h3>';   
         }
         else{        
-            $this->panelHead_1='<h3>Login to view Applications</h3>'; 
+            $this->panelHead_1='<h3>LOGIN TO VIEW APPLICATIONS</h3>'; 
         }       
     }//end METHOD - //set the panel 1 heading
     public function setPanelContent_1(){//set the panel 1 content
@@ -85,36 +85,67 @@ class ViewApplicantUnderC extends Model{
     //Panel 2
     public function setPanelHead_2(){ //set the panel 2 heading
         if($this->loggedin){
-            $this->panelHead_2='<h3>Application Details</h3>';   
+            $this->panelHead_2='<h3>FULL APPLICATION DETAILS</h3>';   
         }
         else{        
-            $this->panelHead_2='<h3>Application Details</h3>'; 
+            $this->panelHead_2='<h3>FULL APPLICATION DETAILS</h3>'; 
         }
     }//end METHOD - //set the panel 2 heading        
     public function setPanelContent_2(){//set the panel 2 content
         if($this->loggedin){
-            $this->panelContent_2='Display Applicant Details ';
+			
+            $this->panelContent_2='JOB ID and HTML name is jobID'.'</br>'.'</br>';
+			
+			 $this->panelContent_2.='First Name and HTML name is firstname'.'</br>'.'</br>';
+			 
+			 $this->panelContent_2.='Last Name and HTML name is lastname'.'</br>'.'</br>';
+			 
+			 $this->panelContent_2.='Address and HTML name is address'.'</br>'.'</br>';
+			 
+			 $this->panelContent_2.='Email Address and HTML name is email1'.'</br>'.'</br>';
+			 
+			 $this->panelContent_2.='Email Confirmation and HTML name is email2'.'</br>'.'</br>';
+			 
+			 $this->panelContent_2.='Mobile Phone and HTML name is phone'.'</br>'.'</br>';
+			 
+			 $this->panelContent_2.='County and HTML name is county'.'</br>'.'</br>';
+			 
+			 $this->panelContent_2.='Country and HTML name is country'.'</br>'.'</br>';
+			 
+			 $this->panelContent_2.='Tell us why you think you would be suitable for this role and HTML name is skills'.'</br>'.'</br>';
+			 
+			 $this->panelContent_2.='Do you hold EU Citizenship or have the right to work full-time in Ireland? and HTML name is right'.'</br>'.'</br>';
+			 
+			 $this->panelContent_2.='Applicant CV and HTML name is filename'.'</br>'.'</br>';
+			 
+			 $this->panelContent_2.=' I give consent for the Company to manage my personal data in accordance with our privacy policy and HTML name is terms&conditions'.'</br>'.'</br>';
+			 
+			 $this->panelContent_2.='Are you available to travel? and HTML name is travel'.'</br>'.'</br>';
+			 
+			$this->panelContent_2.='What is your notice period? and HTML name is notice period'.'</br>'.'</br>'; 
         }
         else{        
-            $this->panelContent_2='Please login to see application details';
+            $this->panelContent_2='PLEASE LOGIN TO VIEW FULL APPLICATION DETAILS';
         }
     }//end METHOD - //set the panel 2 content  
 
     //Panel 3
     public function setPanelHead_3(){ //set the panel 3 heading
         if($this->loggedin){
-            $this->panelHead_3='<h3>Application Details</h3>'; 
+            $this->panelHead_3='<h3>LIST OF JOB APPLICANTS</h3>'; 
         }
         else{        
-            $this->panelHead_3='<h3>Application Details</h3>'; 
+            $this->panelHead_3='<h3>LIST OF JOB APPLICANTS</h3>'; 
         }
     } //end METHOD - //set the panel 3 heading
     public function setPanelContent_3(){ //set the panel 2 content
         if($this->loggedin){
-            $this->panelContent_3='Display Applicant Details ';
+            $this->panelContent_3='INSERT THE STUDENT ID OF APPLICANTS'.'</br>'.'</br>';
+			
+			$this->panelContent_3.='INSERT A BUTTON TO VIEW STUDENT APPLICATION ON PANEL PANEL 2'.'</br>';
         }
         else{        
-            $this->panelContent_3='Please login to see application details';
+            $this->panelContent_3='PLEASE LOGIN TO VIEW LIST OF APPLICANTS';
         }
     }  //end METHOD - //set the panel 2 content        
 
