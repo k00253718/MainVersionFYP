@@ -132,9 +132,9 @@ class Account extends Model{
                         //$sql="UPDATE user SET FirstName = '$firstName',LastName = '$lastName',mobile = '$mobile' WHERE id = '$id'";
 
                         //CLINTON- 
-                         $sql="UPDATE user SET 'user_firstname' = '$firstname',user_lastname='$lastName',user_phone='$mobile',
-                         * user_gender='$gender',user_dob='$dob',user_country='$country',user_forgotten_answer='$forgottenAnswer',user_username='$username'
-                         *WHERE user_id = '$id'"; 
+                         $sql="UPDATE user SET 'user_firstname' = '$firstName',user_lastname='$lastName',user_phone='$mobile',
+                         user_gender='$gender',user_dob='$dob',user_country='$country',user_forgotten_answer='$forgottenAnswer',user_username='$username'
+                         WHERE user_id = '$id'"; 
                         
                         //call the user update record method to save the edited data   
                         if($this->user->saveUpdate($sql)){
